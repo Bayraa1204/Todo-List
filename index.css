@@ -13,7 +13,7 @@ body {
 }
 .container {
   width: 500px;
-  height: 500px;
+  height: 700px;
   background-image: linear-gradient(
     to bottom right,
     rgba(53, 53, 199, 0.696),
@@ -25,6 +25,7 @@ body {
   border-radius: 10px;
   opacity: 0.9;
   gap: 40px;
+  border: 1px solid rgba(54, 97, 206, 0.67);
 }
 .creator-container {
   width: 85%;
@@ -71,20 +72,23 @@ body {
   overflow: scroll;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 .text {
   color: rgba(255, 255, 255, 0.716);
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
-  width: 360px;
+  width: 300px;
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: inherit;
+  margin-left: 3px;
 }
 .text-container {
-  height: 35px;
-  width: 425px;
+  width: 420px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,16 +98,137 @@ body {
 }
 #buttonDelete {
   height: 35px;
-  width: 35px;
+  width: 34px;
   background-image: url(https://cdn-icons-png.flaticon.com/512/6048/6048190.png);
   background-color: inherit;
   background-size: cover;
   border: none;
-  margin-right: 3px;
   opacity: 0.8;
   transition: 0.5s;
 }
 #buttonDelete:hover {
   opacity: 1;
   cursor: pointer;
+}
+.editButton {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(51, 51, 191);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.525);
+  border: 0.5px solid rgba(255, 255, 255, 0.525);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.editButton:hover {
+  color: white;
+  border: 0.5px solid white;
+  cursor: pointer;
+}
+.endButton {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(51, 51, 191);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.525);
+  border: 0.5px solid rgba(255, 255, 255, 0.525);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.endButton:hover {
+  color: white;
+  border: 0.5px solid white;
+  cursor: pointer;
+}
+.completed {
+  width: 425px;
+  height: 200px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 550;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+#completed {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 425px;
+  height: 171px;
+}
+.check {
+  width: 20px;
+  height: 20px;
+  background-color: inherit;
+}
+::placeholder {
+  color: white;
+}
+.dateAndContainer {
+  display: flex;
+  flex-direction: column;
+}
+.date {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.718);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.popin {
+  animation: popin 1s ease;
+  -webkit-animation: popin 1s ease;
+}
+@keyframes popin {
+  from {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes popin {
+  from {
+    -webkit-transform: scale(0);
+  }
+  80% {
+    -webkit-transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+.popout {
+  animation: popout 1s ease;
+  -webkit-animation: popout 1s ease;
+}
+
+@keyframes popout {
+  from {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes popout {
+  from {
+    -webkit-transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(0);
+  }
 }
